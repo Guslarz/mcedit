@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{BE7A64DC-0CF6-4918-B619-6C2FA8037191}</ProjectGuid>
-    <RootNamespace>Base</RootNamespace>
+    <RootNamespace>mcedit</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
     <ProjectName>mcedit</ProjectName>
   </PropertyGroup>
@@ -141,6 +141,47 @@
   <ItemGroup>
     <ClInclude Include="BaseBackend.h" />
     <ClInclude Include="BaseTool.h" />
+    <ClInclude Include="Bind.h" />
+    <ClInclude Include="colors.h" />
+    <ClInclude Include="Input.h" />
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="ItemPosition.h" />
+    <ClInclude Include="Key.h" />
+    <ClInclude Include="KeyboardKey.h" />
+    <ClInclude Include="margins.h" />
+    <ClInclude Include="MceditBackend.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="MenuData.h" />
+    <ClInclude Include="MenuPositioner.h" />
+    <ClInclude Include="Mode.h" />
+    <ClInclude Include="MouseKey.h" />
+    <ClInclude Include="NormalMode.h" />
+    <ClInclude Include="OptionItem.h" />
+    <ClInclude Include="ParsedBind.h" />
+    <ClInclude Include="ResizeKey.h" />
+    <ClInclude Include="Terminal.h" />
+    <ClInclude Include="TestTool.h" />
+    <ClInclude Include="TopItem.h" />
+    <ClInclude Include="Window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Bind.cpp" />
+    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="KeyboardKey.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MceditBackend.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="MenuData.cpp" />
+    <ClCompile Include="MenuPositioner.cpp" />
+    <ClCompile Include="MouseKey.cpp" />
+    <ClCompile Include="NormalMode.cpp" />
+    <ClCompile Include="OptionItem.cpp" />
+    <ClCompile Include="ParsedBind.cpp" />
+    <ClCompile Include="ResizeKey.cpp" />
+    <ClCompile Include="Terminal.cpp" />
+    <ClCompile Include="TestTool.cpp" />
+    <ClCompile Include="TopItem.cpp" />
+    <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
