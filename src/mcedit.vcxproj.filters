@@ -64,6 +64,18 @@
     <Filter Include="MceditBackend\Mode\NormalMode">
       <UniqueIdentifier>{fdb375a6-9a7e-4333-95bd-c34194c46200}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MceditBackend\Mode\TooSmallMode">
+      <UniqueIdentifier>{f41d6541-7752-4959-9c33-4ae531e189bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MceditBackend\Mode\HelpMode">
+      <UniqueIdentifier>{86c85af7-24cc-4a3a-b750-6ff7366a3a09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MceditBackend\Mode\AlertMode">
+      <UniqueIdentifier>{8ce85bc0-dd8e-492d-a701-79980f355de5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MceditBackend\Mode\ParamMode">
+      <UniqueIdentifier>{dd5ff643-5c7b-44b4-90b2-e50a6fb4362c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseBackend.h">
@@ -138,6 +150,18 @@
     <ClInclude Include="NormalMode.h">
       <Filter>MceditBackend\Mode\NormalMode</Filter>
     </ClInclude>
+    <ClInclude Include="TooSmallMode.h">
+      <Filter>MceditBackend\Mode\TooSmallMode</Filter>
+    </ClInclude>
+    <ClInclude Include="HelpMode.h">
+      <Filter>MceditBackend\Mode\HelpMode</Filter>
+    </ClInclude>
+    <ClInclude Include="AlertMode.h">
+      <Filter>MceditBackend\Mode\AlertMode</Filter>
+    </ClInclude>
+    <ClInclude Include="ParamMode.h">
+      <Filter>MceditBackend\Mode\ParamMode</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -188,6 +212,18 @@
     </ClCompile>
     <ClCompile Include="NormalMode.cpp">
       <Filter>MceditBackend\Mode\NormalMode</Filter>
+    </ClCompile>
+    <ClCompile Include="TooSmallMode.cpp">
+      <Filter>MceditBackend\Mode\TooSmallMode</Filter>
+    </ClCompile>
+    <ClCompile Include="HelpMode.cpp">
+      <Filter>MceditBackend\Mode\HelpMode</Filter>
+    </ClCompile>
+    <ClCompile Include="AlertMode.cpp">
+      <Filter>MceditBackend\Mode\AlertMode</Filter>
+    </ClCompile>
+    <ClCompile Include="ParamMode.cpp">
+      <Filter>MceditBackend\Mode\ParamMode</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

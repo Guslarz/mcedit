@@ -139,10 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AlertMode.h" />
     <ClInclude Include="BaseBackend.h" />
     <ClInclude Include="BaseTool.h" />
     <ClInclude Include="Bind.h" />
     <ClInclude Include="colors.h" />
+    <ClInclude Include="HelpMode.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="ItemPosition.h" />
@@ -157,15 +159,19 @@
     <ClInclude Include="MouseKey.h" />
     <ClInclude Include="NormalMode.h" />
     <ClInclude Include="OptionItem.h" />
+    <ClInclude Include="ParamMode.h" />
     <ClInclude Include="ParsedBind.h" />
     <ClInclude Include="ResizeKey.h" />
     <ClInclude Include="Terminal.h" />
     <ClInclude Include="TestTool.h" />
+    <ClInclude Include="TooSmallMode.h" />
     <ClInclude Include="TopItem.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AlertMode.cpp" />
     <ClCompile Include="Bind.cpp" />
+    <ClCompile Include="HelpMode.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="KeyboardKey.cpp" />
     <ClCompile Include="main.cpp" />
@@ -176,10 +182,12 @@
     <ClCompile Include="MouseKey.cpp" />
     <ClCompile Include="NormalMode.cpp" />
     <ClCompile Include="OptionItem.cpp" />
+    <ClCompile Include="ParamMode.cpp" />
     <ClCompile Include="ParsedBind.cpp" />
     <ClCompile Include="ResizeKey.cpp" />
     <ClCompile Include="Terminal.cpp" />
     <ClCompile Include="TestTool.cpp" />
+    <ClCompile Include="TooSmallMode.cpp" />
     <ClCompile Include="TopItem.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
