@@ -1,11 +1,11 @@
-#include "TestTool.h"
 #include "MceditBackend.h"
+#include "TestTool.h"
 
 
 int main()
 {
 	TestTool *tool = new TestTool();
-	MceditBackend *backend = new MceditBackend(tool);
+	BaseBackend *backend = new MceditBackend(tool);
 
 	backend->bind(".File.New", []() {mvprintw(5, 5, "X"); refresh(); }, "");
 	backend->bind(".File.New2", []() {}, "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa");

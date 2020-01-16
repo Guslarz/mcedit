@@ -11,7 +11,7 @@
 #include <functional>
 
 
-class MceditBackend final :
+class MceditBackend :
 	public BaseBackend
 {
 	bool isOpen;
