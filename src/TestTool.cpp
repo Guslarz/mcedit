@@ -65,3 +65,10 @@ void TestTool::param()
 {
 	wprintw(window, "otoooo %s", getEntry("param").c_str());
 }
+
+
+void TestTool::clear()
+{
+	wclear(window);
+	wrefresh(window);
+}

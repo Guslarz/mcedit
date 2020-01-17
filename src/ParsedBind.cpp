@@ -28,8 +28,8 @@ std::smatch ParsedBind::parse(const std::string &command)
 
 const std::regex ParsedBind::itemRegex(
 	"^"
-	"\\.([A-Za-z0-9]+)"	//top label
-	"\\.([A-Za-z0-9 ]+)"	//option label
+	"\\.(.+?)"	//top label
+	"\\.(.+?)"	//option label
 	"(?:\\$\\{"			//param
 	"([^\\|]*)"			//param label
 	"\\|"

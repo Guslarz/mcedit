@@ -35,10 +35,11 @@ public:
 
 	void bind(const std::string&, std::function<void()>, const std::string&) override;
 	void start() override;
-
-private:
 	void handleResize();
 	void handleModeEnd();
+	void handleParam(const OptionItem*);
+
+private:
 	void helpHandler();
 	void quitHandler();
 };

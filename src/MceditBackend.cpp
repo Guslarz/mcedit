@@ -41,8 +41,8 @@ void MceditBackend::bind(const std::string &command, std::function<void()> handl
 
 void MceditBackend::start()
 {
-	bind(".File.Help", [this]() { this->helpHandler(); }, "");
-	bind(".File.Quit", [this]() { this->quitHandler(); }, "");
+	bind(".File.Help...", [this]() { this->helpHandler(); }, "List manual entries for each bound handler");
+	bind(".File.Quit", [this]() { this->quitHandler(); }, "Close application");
 	menu.setPosition();
 	menu.renderTop();
 	while (isOpen) {
@@ -50,8 +50,7 @@ void MceditBackend::start()
 			(*currentMode)();
 		}
 		catch (const OptionItem *item) {
-			paramMode.setTarget(item);
-			currentMode = &paramMode;
+			handleParam(item);
 		}
 		catch (Mode::Resize&) {
 			handleResize();
@@ -85,6 +84,13 @@ void MceditBackend::handleModeEnd()
 {
 	terminal.restore();
 	currentMode = &normalMode;
+}
+
+
+void MceditBackend::handleParam(const OptionItem *item)
+{
+	paramMode.setTarget(item);
+	currentMode = &paramMode;
 }
 
 

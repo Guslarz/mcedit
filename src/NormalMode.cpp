@@ -3,8 +3,8 @@
 
 
 NormalMode::NormalMode(Input &input, BaseTool &tool, Menu &menu, const std::function<void()> &editionHandler) :
-	tool(tool),
 	Mode(input),
+	tool(tool),
 	menu(menu),
 	editionHandler(editionHandler)
 {}
