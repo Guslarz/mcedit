@@ -1,5 +1,7 @@
 #include "TestTool.h"
 
+#include <stdexcept>
+
 
 
 TestTool::TestTool()

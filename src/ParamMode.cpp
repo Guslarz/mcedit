@@ -2,6 +2,8 @@
 #include "margins.h"
 #include "colors.h"
 
+#include <stdexcept>
+
 
 
 ParamMode::ParamMode(Input &input, BaseTool &tool) :
