@@ -19,6 +19,12 @@ Chcesz dowiedzieć się jaki klawisz został ostatnio wciśnięty? Backend infor
 
 Czemu `getEntry` i `setEntry` są nie dość, że wirtualne, to i abstrakcyjne? Bo tak. Jak kogoś poniesie inwencja twórcza to sobie je implementuje jak mu się podoba, jak nie to kopiuje ode mnie z TestTool.  Dodatkowo klasa `UndefinedEntry` to exception w przypadku, gdy ktoś odwołuje się do entry, którego wartość nie została wcześniej ustawiona (wywołuje `getEntry("jakiesEntry")`, kiedy nie było wcześniej `setEntry("jakesEntry", "jakasWartosc")`.
 
+`getEntry` przyjmuje tylko jeden parametr - nazwę entry, np. `tool->getEntry("KEY")` pobierze wartość entry "KEY", ewentualnie wywali `UndefinedEntry`, jeśli nie jest zdefiniowane.
+
+`setEntry` przyjmuje dwa parametry - nazwę entry i wartość, jaką ma mu ustawić np. `tool->setEntry("KEY", "<CTRL+C">)`.
+
+W jednej i drugiej funkcji paramterem (parametrami) są stringi, to magiczne `const std::string&` oznacza, że zostają przekazane jako referencja - bez niej wartość ta byłaby kopiowana i dodatkowo jest const, a więc w ciele funkcji nie możemy zmienić wartości w tym stringu.
+
 ##### assignWindow
 Tool nie korzysta z `stdscr`, tylko z okna które przypisuje mu backend. Jak chcecie sobie je rozbić na kilka okien polecam funkcję `derwin`.
 
@@ -33,9 +39,15 @@ No backendy z tego dziedziczą.
 Tak tylko chciałem narzucić, żeby każdy backend ogarnął, że musi mieć jakiś dostęp do toola (np. przez wskaźnik), który z niego korzysta, żeby mógł mu przypisywać okno (wyżej), albo korzystać z jego `entries` (też wyżej).
 
 ##### Witrualny desturktor
-Na tej samej zasadzie w toolu.
+Na tej samej zasadzie co w toolu.
 
-## Własna implementacja
+##### Bind
+
+
+##### Start
+Backend żeby prawidłowo działał musi gdzieś w sobie zawierać pętlę (przynajmniej mi nie przychodzi do głowy inne sensowne rozwiązanie), w której w skrócie pobiera informację o tym co się stało (wciśnięty klawisz, kliknięcie myszki, zmiana rozmiaru) i jakoś na to reaguje. Trzeba go w takim razie poinformować, kiedy dodane zostały wszystkie bindy i może zacząć to działanie w pętli. To właśnie robi `start`.
+
+## Własna implementacja toola
 
 ## Disclaimer
 Proszę olać wszelkie błędy interpunkcyjne, ortograficzne etc.
