@@ -60,3 +60,7 @@ Wszystkiego tu nie opiszę, polecam po prostu popatrzeć w kod.
 
 ## Disclaimer
 Proszę olać wszelkie błędy interpunkcyjne, ortograficzne etc.
+
+Na ewentualne pytania postaram się odpowiadać, ale nie obiecuję, że każdemu wszystko wytłumaczę.
+
+Jak ktoś znajdzie jakiś błąd to też piszcie.
