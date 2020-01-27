@@ -70,7 +70,9 @@ void NormalMode::handle(const MouseKey &key)
 
 void NormalMode::handle(const KeyboardKey &key)
 {
-	tool.setEntry("KEY", key.getRepresentation());
-	if (editionHandler)
-		editionHandler();
+	if (menu.getSelected() == nullptr) {
+		tool.setEntry("KEY", key.getRepresentation());
+		if (editionHandler)
+			editionHandler();
+	}
 }
