@@ -19,6 +19,7 @@ int KeyboardKey::getCode() const
 
 
 const std::unordered_map<int, std::string> KeyboardKey::keyMap = {
+{0, "<WINDOWS>"},
 {1, "<CTRL+A>"},
 {2, "<CTRL+B>"},
 {3, "<CTRL+C>"},
