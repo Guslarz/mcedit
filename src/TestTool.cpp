@@ -32,6 +32,7 @@ void TestTool::setEntry(const std::string &key, const std::string &value)
 void TestTool::assignWindow(WINDOW *windowptr)
 {
 	window = windowptr;
+	scrollok(window, TRUE);
 }
 
 
@@ -39,6 +40,16 @@ void TestTool::edition()
 {
 	if (getEntry("KEY").size() == 1) {
 		waddch(window, getEntry("KEY")[0]);
+	}
+	else if (getEntry("KEY") == "<RESIZE>") {
+		//box(window, 0, 0);
+		wprintw(window, "ASDASDSADSADASDSADASDSADSADSADASda");
+	}
+	else if (getEntry("KEY") == "<UARROW>") {
+		wscrl(window, -1);
+	}
+	else if (getEntry("KEY") == "<DARROW>") {
+		wscrl(window, 1);
 	}
 	wrefresh(window);
 }
@@ -73,4 +84,14 @@ void TestTool::clear()
 {
 	wclear(window);
 	wrefresh(window);
+}
+
+
+void TestTool::derwinParam()
+{
+	WINDOW *win = derwin(window, 10, 10, 5, 5);
+	wprintw(win, "XDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD");
+	wrefresh(win);
+	//wclear(win);
+	delwin(win);
 }

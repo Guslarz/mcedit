@@ -8,7 +8,7 @@
 #include <memory>
 
 
-constexpr int resizeSleep = 500;
+constexpr int RESIZE_SLEEP = 500;
 
 
 class Input final

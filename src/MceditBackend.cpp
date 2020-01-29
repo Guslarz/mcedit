@@ -89,6 +89,10 @@ void MceditBackend::handleModeEnd()
 
 void MceditBackend::handleParam(const OptionItem *item)
 {
+	init_color(PARAM_FG_COLOR, 0, 0, 0);
+	init_color(PARAM_BG_COLOR, 1000, 1000, 1000);
+	init_pair(PARAM_PAIR, PARAM_FG_COLOR, PARAM_BG_COLOR);
+
 	paramMode.setTarget(item);
 	currentMode = &paramMode;
 }

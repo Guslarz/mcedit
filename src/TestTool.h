@@ -24,5 +24,6 @@ public:
 	void unsave();
 	void param();
 	void clear();
+	void derwinParam();
 };
 

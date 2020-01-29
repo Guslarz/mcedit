@@ -19,7 +19,7 @@ const Key& Input::getKey()
 	int code = getch();
 	switch (code) {
 	case KEY_RESIZE:
-		std::this_thread::sleep_for(std::chrono::duration<int, std::milli>(resizeSleep));
+		std::this_thread::sleep_for(std::chrono::duration<int, std::milli>(RESIZE_SLEEP));
 		key = std::unique_ptr<Key>(new ResizeKey());
 		break;
 	case KEY_MOUSE:

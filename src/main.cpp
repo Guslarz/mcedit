@@ -17,7 +17,8 @@ int main()
 	backend->bind(".Test.Unsave", [&tool]() {tool->unsave(); }, "");
 	backend->bind(".Test.Param${Cos tam ciekawego o parameeeeeeeeeeeeeeeeeeeeetrzeeeeeeee adadhdhsahdsadasdhsahdhashdhsahdhashdhahds:|param}", [&tool]() {tool->param(); }, "");
 	backend->bind("#mcedit#<EDITION>", [&tool]() { tool->edition(); }, "");
-	backend->bind("#mcedit#.Test.Clear", [&tool]() {tool->clear(); }, "Clear tool");
+	backend->bind("#mcedit#.Test.Clear", [&tool]() { tool->clear(); }, "Clear tool");
+	backend->bind(".Test.DerwinParam${Param|Param}", [&tool]() { tool->derwinParam(); }, "");
 
 	backend->start();
 

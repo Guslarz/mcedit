@@ -33,7 +33,7 @@ void ParamMode::operator()()
 			auto &key = dynamic_cast<const ResizeKey&>(inputKey);
 			delWindow();
 			throw Resize();
-			continue;
+			return;
 		} catch (std::bad_cast&) {}
 
 		try {
@@ -112,7 +112,8 @@ void ParamMode::renderWindow()
 	for (size_t i = 0; i < lines.size(); ++i)
 		mvwprintw(window, i + 1, (bufferWidth - lines[i].size()) / 2, "%s", lines[i].c_str());
 	wattroff(window, COLOR_PAIR(PARAM_PAIR));
-	wrefresh(window);
+	wnoutrefresh(window);
+	doupdate();
 }
 
 
